@@ -6,29 +6,33 @@ import { RoutesConst } from "./constants/routes";
 import Dashboard from "./pages/Dashboard";
 import LoginPage from "./pages/LoginPage";
 import PrivateRoute from "./routes/PrivateRoute";
+import { Navbar } from "./components/Navbar";
 
 const App: React.FC = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route
-        path={RoutesConst.LOGIN}
-        element={
-          <PublicRoute>
-            <LoginPage />
-          </PublicRoute>
-        }
-      />
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route
+          path={RoutesConst.LOGIN}
+          element={
+            <PublicRoute>
+              <LoginPage />
+            </PublicRoute>
+          }
+        />
 
-      <Route
-        path={RoutesConst.DASHBOARD}
-        element={
-          <PrivateRoute>
-            <Dashboard />
-          </PrivateRoute>
-        }
-      />
-    </Routes>
+        <Route
+          path={RoutesConst.DASHBOARD}
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+      </Routes>
+    </>
   );
 };
 
