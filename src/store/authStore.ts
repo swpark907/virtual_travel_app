@@ -7,7 +7,8 @@ class AuthStore {
 
   constructor() {
     this.isAuthenticated = false;
-    this.user = null;
+    this.user = "USER-TEST";
+    // this.user = null;
     this.err = false;
     makeAutoObservable(this);
   }

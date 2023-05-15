@@ -3,10 +3,11 @@ import "./index.css";
 import PublicRoute from "./routes/PublicRoute";
 import { RoutesConst } from "./constants";
 import PrivateRoute from "./routes/PrivateRoute";
-import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components";
 import { Landing } from "./pages/Landing";
 import { Dashboard } from "./pages/Dashboard";
 import { LoginPage } from "./pages/LoginPage";
+import { SignUpPage } from "./pages/SignUpPage";
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,15 @@ const App: React.FC = () => {
           element={
             <PublicRoute>
               <LoginPage />
+            </PublicRoute>
+          }
+        />
+
+        <Route
+          path={RoutesConst.SIGNUP}
+          element={
+            <PublicRoute>
+              <SignUpPage />
             </PublicRoute>
           }
         />
