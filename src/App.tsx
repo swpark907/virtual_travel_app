@@ -8,6 +8,7 @@ import { Landing } from "./pages/Landing";
 import { Dashboard } from "./pages/Dashboard";
 import { LoginPage } from "./pages/LoginPage";
 import { SignUpPage } from "./pages/SignUpPage";
+import Map from "./pages/Map/Map";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="map" element={<Map />} />
         <Route
           path={RoutesConst.LOGIN}
           element={

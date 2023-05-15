@@ -1,31 +1,33 @@
+import RoutesConst from "./routes";
+
 const NavData = [
   {
     title: "Home",
-    path: "/home",
+    path: RoutesConst.HOME,
     subNav: [],
   },
   {
     title: "Map",
-    path: "/map",
+    path: RoutesConst.MAP,
     subNav: [
       {
         title: "Interactive Map",
-        path: "/map/interactive",
+        path: RoutesConst.INTERACTIVE_MAP,
       },
       {
         title: "Unique Spot",
-        path: "/map/unique-spot",
+        path: RoutesConst.UNIQUE_SPOT,
       },
     ],
   },
   {
     title: "Community",
-    path: "/community",
+    path: RoutesConst.COMMUNITY,
     subNav: [],
   },
   {
     title: "Contact",
-    path: "/contact",
+    path: RoutesConst.CONTACT,
     subNav: [],
   },
 ];
