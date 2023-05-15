@@ -2,7 +2,19 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        "text-shadow": "0 0 5px rgba(0, 0, 0, 0.5)",
+      },
+      colors: {
+        themeColor: "#40E0D0",
+      },
+    },
+  },
+  variants: {
+    extend: {
+      boxShadow: ["hover"],
+    },
   },
   plugins: [],
 };

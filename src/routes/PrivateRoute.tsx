@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import { useStore } from "../store/StoreContext";
-import { RoutesConst } from "../constants/routes";
+import { RoutesConst } from "../constants";
 
 const PrivateRoute: React.FC<{ children: React.ReactNode }> = ({
   children,

@@ -1,7 +1,9 @@
-export const RoutesConst = {
+const RoutesConst = {
   LANDING: "/",
   HOME: "/home",
   LOGIN: "/login",
-  REGISTER: "/register",
+  SIGNUP: "/signup",
   DASHBOARD: "/dashboard",
 };
+
+export default RoutesConst;
