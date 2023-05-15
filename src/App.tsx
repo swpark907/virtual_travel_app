@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./index.css";
 import PublicRoute from "./routes/PublicRoute";
-import { RoutesConst } from "./constants/routes";
+import { RoutesConst } from "./constants";
 import PrivateRoute from "./routes/PrivateRoute";
 import { Navbar } from "./components/Navbar";
 import { Landing } from "./pages/Landing";
