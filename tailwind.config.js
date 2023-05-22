@@ -8,6 +8,7 @@ module.exports = {
       },
       colors: {
         themeColor: "#40E0D0",
+        cardColor: "#fff ",
       },
     },
   },
