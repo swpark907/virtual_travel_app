@@ -20,7 +20,7 @@ const TravelCard: React.FC<TravelCardProps> = ({ card }) => {
   };
 
   return (
-    <div className="w-full bg-cardColor px-4 py-4 rounded-lg flex-shrink-0 flex">
+    <div className="w-full px-4 py-4 rounded-lg flex-shrink-0 flex">
       <img
         src={thumbnail}
         alt=""

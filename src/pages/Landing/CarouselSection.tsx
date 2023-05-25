@@ -1,46 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { testCardData } from "../../constants/testData";
 import TravelCard from "../../components/TravelCard";
+import useCarousel from "../../hooks/useCarousel";
 
 const CarouselSection: React.FC = () => {
-  const [carouselIndex, setCarouselIndex] = useState<number>(0);
-
-  useEffect(() => {
-    const slideInterval = setInterval(() => {
-      handleNextSlide();
-    }, 5000);
-
-    return () => {
-      clearInterval(slideInterval);
-    };
-  }, [carouselIndex]);
-
-  const handlePrevSlide = () => {
-    carouselIndex <= 0
-      ? setCarouselIndex(testCardData.length - 1)
-      : setCarouselIndex(carouselIndex - 1);
-  };
-
-  const handleNextSlide = () => {
-    carouselIndex >= testCardData.length - 1
-      ? setCarouselIndex(0)
-      : setCarouselIndex(carouselIndex + 1);
-  };
-
-  const handleIndicatorClick = (index: number) => {
-    setCarouselIndex(index);
-  };
+  const {
+    carouselIndex,
+    noTransition,
+    copiedArr,
+    handlePrevSlide,
+    handleNextSlide,
+    handleIndicatorClick,
+  } = useCarousel(testCardData);
 
   return (
     <div className="w-full relative overflow-hidden">
       <div
-        className="relative flex transform transition-transform duration-500 ease-in-out"
+        className="relative flex transform"
         style={{
           transform: `translateX(-${carouselIndex * 100}%)`,
+          transition: noTransition ? "none" : "transform 500ms ease-in-out",
         }}
       >
-        {testCardData.map((card) => (
-          <TravelCard card={card} />
+        {copiedArr.map((card, index) => (
+          <TravelCard key={index} card={card} />
         ))}
       </div>
       <div className="flex w-full justify-between">
@@ -51,7 +34,7 @@ const CarouselSection: React.FC = () => {
               onClick={() => handleIndicatorClick(index)}
               key={index}
               className={`w-10 h-4 rounded-full cursor-pointer ${
-                carouselIndex === index ? "bg-blue-500" : "bg-white"
+                carouselIndex === index + 1 ? "bg-blue-500" : "bg-white"
               }`}
             />
           ))}
@@ -61,4 +44,5 @@ const CarouselSection: React.FC = () => {
     </div>
   );
 };
+
 export default CarouselSection;
