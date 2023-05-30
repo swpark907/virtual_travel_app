@@ -26,7 +26,7 @@ const SearchTermItem: React.FC<SearchTermItemProps> = ({
       }}
     >
       <ul
-        className="w-full"
+        className="w-full px-6"
         style={{
           transform: `translateY(-${
             (carouselIndex * 100) / copiedArr.length
@@ -35,7 +35,10 @@ const SearchTermItem: React.FC<SearchTermItemProps> = ({
         }}
       >
         {copiedArr.map((term, index) => (
-          <li className="flex items-center h-10" key={index}>
+          <li
+            className="flex items-center h-10 w-full justify-between"
+            key={index}
+          >
             <p className="w-full text-l font-bold text-gray-700 mr-2 min-w-max">
               {index === testData.length + 1 ? 1 : index}위
             </p>

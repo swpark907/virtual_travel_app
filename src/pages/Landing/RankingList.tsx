@@ -15,7 +15,7 @@ const RankingList: React.FC<RankingListProps> = ({
     <ul
       className={`${
         isRankingVisible ? "block" : "hidden"
-      } absolute top-10 w-full px-2 rounded-md py-2 shadow-custom-light`}
+      } absolute top-10 w-full px-6 rounded-md py-2 shadow-custom-light`}
       onMouseEnter={() => {
         setIsRankingVisible(true);
       }}
