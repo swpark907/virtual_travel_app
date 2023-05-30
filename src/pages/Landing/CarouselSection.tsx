@@ -14,7 +14,7 @@ const CarouselSection: React.FC = () => {
   } = useCarousel(testCardData);
 
   return (
-    <div className="w-full relative overflow-hidden">
+    <div className="w-7/12 relative overflow-hidden">
       <div
         className="relative flex transform"
         style={{

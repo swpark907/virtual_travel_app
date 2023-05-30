@@ -6,7 +6,7 @@ const TitleSection: React.FC = () => {
     heroSection: { mainTitle, subTitle, hashtags },
   } = LandingPageData;
   return (
-    <div className="mx-auto max-w-screen-xl px-20 text-right w-full flex flex-col justify-center">
+    <div className="mx-auto max-w-screen-xl px-20 text-right w-5/12 flex flex-col justify-center">
       <h1 className="text-5xl font-semibold mb-2">{mainTitle}</h1>
       <h2 className="text-2xl mb-2">{subTitle}</h2>
       <h3 className="text-lg">{hashtags}</h3>

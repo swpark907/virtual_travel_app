@@ -30,8 +30,8 @@ const RealTimeTrending: React.FC = () => {
   }, [carouselIndex, handleNextSlide]);
 
   return (
-    <div className="w-full relative flex h-10 px-4">
-      <h1 className="z-10 py-2 w-full text-center font-bold">
+    <div className="w-full relative flex h-10 px-10">
+      <h1 className="z-10 py-2 w-full font-bold md:none">
         실시간 인기 검색어 순위
       </h1>
       <div className="relative w-full">
